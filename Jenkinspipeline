@@ -1,0 +1,10 @@
+pipeline {
+    agent { label 'JenkinsSlave' }
+    stages {
+        stage('Clone Dev Branch') {
+            steps {
+                git branch: 'dev', url: 'https://github.com/gitnilesh99/IIT-DevOpsAssignment.git'
+            }
+        }
+    }
+}
